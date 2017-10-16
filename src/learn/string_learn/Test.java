@@ -13,5 +13,9 @@ public class Test {
         System.out.println(str_pi1);
         double ppi = Double.parseDouble(str_pi);
         System.out.println(ppi);
+        char c = 'A';
+        System.out.println(c);
+        short sc=(short) c;
+        System.out.println(sc);
     }
 }
