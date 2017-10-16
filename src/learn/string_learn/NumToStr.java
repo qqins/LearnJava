@@ -14,6 +14,6 @@ public class NumToStr {
         System.out.println(str.equals(str2));
         System.out.println(str.compareTo(str2));
         System.out.println(str2);
-        System.out.println(1.0-0.9);
+        System.out.println(1.0 - 0.9);
     }
 }
