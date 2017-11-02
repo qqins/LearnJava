@@ -1,4 +1,4 @@
-package learn.string_learn;
+package learn.how2j.string_learn;
 
 import java.util.Scanner;
 

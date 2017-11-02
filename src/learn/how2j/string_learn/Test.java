@@ -1,4 +1,4 @@
-package learn.string_learn;
+package learn.how2j.string_learn;
 
 /**
  * Created by qqin on 17-10-16  下午3:57
