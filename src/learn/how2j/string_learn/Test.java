@@ -17,5 +17,22 @@ public class Test {
         System.out.println(c);
         short sc=(short) c;
         System.out.println(sc);
+
+        String s = "helloworld";
+        char [] ch=s.toCharArray();
+        System.out.println(ch);
+        char []cc={'h','h','h','h'};
+        System.out.println(cc);
+        int[] n={1,2,3,4,5};
+        System.out.println(n);
+
+        String q = new String("   ehhe   ");
+        System.out.println(q);
+        System.out.println(q.trim());
+
+        String t = q.replaceFirst(" ","r");
+        System.out.println(t);
+
+
     }
 }

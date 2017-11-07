@@ -34,7 +34,7 @@ public class RecursionSelectPassWord {
             } else {
                 String guess = String.valueOf(guessPassword);
                 System.out.println(guess);
-                if (password.equals(guess)) {
+                if (password.equals(guess)) { //由于equals
                     System.out.println("破解密码为:" + guess);
                     found = true;
                     return;
