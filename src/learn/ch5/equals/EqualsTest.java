@@ -1,5 +1,7 @@
 package learn.ch5.equals;
 
+import java.util.Date;
+
 /**
  * Created by qqins on 2017/9/28 14:14
  */
@@ -7,7 +9,6 @@ public class EqualsTest {
     public static void main(String[] args) {
         Employee q1 = new Employee("qin1", 50000, 1994, 12, 8);
         Employee q2 = q1;
-        
         Employee q3 = new Employee("qin1", 50000, 1994, 12, 8);
         Employee bob = new Employee("bob", 10000, 1989, 1, 9);
         System.out.println("q1.equals(q2):" + q1.equals(q2));

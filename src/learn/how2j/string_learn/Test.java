@@ -1,5 +1,7 @@
 package learn.how2j.string_learn;
 
+import java.util.Arrays;
+
 /**
  * Created by qqin on 17-10-16  下午3:57
  */
@@ -7,6 +9,7 @@ public class Test {
     public static void main(String[] args) {
         double pi = 3.1415926;
         String str_pi = String.valueOf(pi);
+
         System.out.println(str_pi);
         Double dPi = pi;
         String str_pi1 = dPi.toString();
@@ -32,6 +35,11 @@ public class Test {
 
         String t = q.replaceFirst(" ","r");
         System.out.println(t);
+
+        char [] chh={'a','c','b'};
+        String [] strr={"aa","dd","ff"};
+        System.out.println(chh);
+        System.out.println(Arrays.toString(strr));
 
 
     }
