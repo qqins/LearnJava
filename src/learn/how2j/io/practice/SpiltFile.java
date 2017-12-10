@@ -26,19 +26,28 @@ public class SpiltFile {
             fileNum = (int) (file.length() / spiltLength) + 1;
         }
         byte[] fullFile = new byte[(int) file.length()];
+        FileInputStream fis = null;
         try {
-            FileInputStream fis = new FileInputStream(file);
+            fis = new FileInputStream(file);
             fis.read(fullFile);
-            fis.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+        FileOutputStream fos = null;
         try {
             byte[] partFile;
             for (int i = 0; i < fileNum; i++) {
                 String fileName = "cqupt" + "_" + (i + 1);
-                File outFile = new File(file.getParent(), fileName);
-                FileOutputStream fos = new FileOutputStream(outFile);
+                File outFile = new File(file.getParent() + "/cqupt", fileName);
+                fos = new FileOutputStream(outFile);
                 if (i != fileNum - 1) {
                     partFile = Arrays.copyOfRange(fullFile, i * spiltLength,
                             (i + 1) * spiltLength);
@@ -47,10 +56,16 @@ public class SpiltFile {
                             (int) file.length());
                 }
                 fos.write(partFile);
-                fos.close();
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (fos != null)
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
         }
     }
 }
