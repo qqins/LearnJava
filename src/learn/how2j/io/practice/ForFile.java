@@ -9,24 +9,24 @@ import java.util.Arrays;
 public class ForFile {
     public static void main(String[] args) {
         File f = new File("c:/WINDOWS");
-        File[] fs=f.listFiles();
-        long min=fs[0].length();
-        long max=fs[0].length();
-        File fa=fs[0];
-        File fi=fs[0];
-        for (File fr:fs){
-            if(fr.isFile())
+        File[] fs = f.listFiles();
+        long min = fs[0].length();
+        long max = fs[0].length();
+        File fa = fs[0];
+        File fi = fs[0];
+        for (File fr : fs) {
+            if (fr.isFile())
                 continue;
-            if(fr.length()>max){
-                max=fr.length();
-                fa=fr;
+            if (fr.length() > max) {
+                max = fr.length();
+                fa = fr;
             }
-            if(fr.length()<min && fr.length()!=0){
-                min=fr.length();
-                fi=fr;
+            if (fr.length() < min && fr.length() != 0) {
+                min = fr.length();
+                fi = fr;
             }
         }
-        System.out.println(fa.toString()+":"+max);
-        System.out.println(fi.toString()+":"+min);
+        System.out.println(fa.toString() + ":" + max);
+        System.out.println(fi.toString() + ":" + min);
     }
 }
