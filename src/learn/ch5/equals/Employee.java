@@ -21,6 +21,7 @@ public class Employee {
 
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -35,6 +36,7 @@ public class Employee {
         return Objects.equals(this.name, e.name) && Objects.equals(this.salary, e.salary)
                 && Objects.equals(this.hireDay, e.hireDay);
     }
+    @Override
     public int hashCode(){
         return Objects.hash(name,salary,hireDay);
     }
