@@ -1,5 +1,7 @@
 package learn.how2j.collection.node;
 
+import java.util.Comparator;
+
 /**
  * @author qqins
  */
