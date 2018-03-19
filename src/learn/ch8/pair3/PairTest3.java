@@ -2,11 +2,18 @@ package learn.ch8.pair3;
 
 import learn.ch8.Pair;
 
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+
 /**
  * @author qqins
+ * 秦秦秦秦秦
  */
 public class PairTest3 {
     public static void main(String[] args) {
+        System.out.println("Default Charset=" + Charset.defaultCharset());
+        System.out.println("file.encoding=" + System.getProperty("file.encoding"));
+
         Manager ceo = new Manager("Gus Greedy", 800000, 2003,
                 12, 15);
         Manager cfo = new Manager("Sid Sneaky", 600000, 2003,
@@ -15,7 +22,6 @@ public class PairTest3 {
         printBuddies(buddies);
         ceo.setBonus(1000000);
         cfo.setBonus(500000);
-
         Manager[] managers = {ceo, cfo};
         Pair<Employee> result = new Pair<>();
         minmaxBonus(managers, result);

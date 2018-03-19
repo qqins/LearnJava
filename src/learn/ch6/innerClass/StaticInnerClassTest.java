@@ -1,6 +1,7 @@
 package learn.ch6.innerClass;
 
 import com.sun.org.apache.xpath.internal.FoundIndex;
+import com.sun.org.apache.xpath.internal.operations.String;
 
 /**
  * @author qqins
@@ -26,7 +27,6 @@ class ArrayAlg {
             first = f;
             second = s;
         }
-
         public double getFirst() {
             return first;
         }

@@ -1,9 +1,6 @@
 package learn.ch9;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * @author qq
@@ -33,7 +30,6 @@ public class LinkedListTest {
             aIter.add(bIter.next());
         }
         System.out.println(a);
-
         //remove every second word from b
 
         bIter = b.iterator();
