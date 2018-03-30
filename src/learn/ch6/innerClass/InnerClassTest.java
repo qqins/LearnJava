@@ -40,6 +40,7 @@ class TalkingClock {
         };
         Timer t = new Timer(interval, listener);
         t.start();
+
     }
 
 
