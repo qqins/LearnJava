@@ -1,12 +1,16 @@
 package learn.how2j.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class TestJdbc {
+    private String url="jdbc:mysql://120.79.200.250:3306/test?characterEncoding=UTF-8 & useSSL=true ";
+    private String user = "root";
+    private String password = "123456";
     public static void main(String[] args) {
+
+    }
+
+    public void test() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -25,6 +29,19 @@ public class TestJdbc {
             s.execute(sql);
             s.execute(sql1);
             System.out.println("连接成功" + s);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void preparedStatement() {
+        String sql = "insert into hero values(null,?,?,?)";
+        try (Connection con=DriverManager.getConnection(url,user,password);
+             PreparedStatement ps=con.prepareStatement(sql)){
+            ps.setString(1,"赵信");
+            ps.setFloat(2,400.0f);
+            ps.setInt(3,99);
+            ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
