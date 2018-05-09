@@ -1,7 +1,5 @@
 package learn.how2j.Thread;
 
-import com.sun.javafx.logging.PulseLogger;
-
 /**
  * Created by qqins on 2017/12/26 9:21
  */
